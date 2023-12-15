@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+:root{
+    --laranja-color: #f85e12;
+    --azul-muzza: #110d40;
+    --transition: all 300ms ease-in-out;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(17, 13, 64, 0.6),rgba(248, 94, 18, 0.2)), url(img/capa6.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.form-box{
+    width: 90%;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(255, 255, 255, 0.658);
+    padding: 50px 60px 70px;
+    text-align: center;
+}
+.form-box h1{
+    font-size: 30px;
+    margin-bottom: 60px;
+    color: var(--azul-muzza);
+    position: relative;
+}
+.form-box h1::after{
+    content: '';
+    width: 30px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--azul-muzza);
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.input-field{
+    background: #eaeaea;
+    margin: 15px 0;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    max-height: 65px;
+    transition: max-height 0.5s;
+    overflow: hidden;
+}
+input{
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 18px 15px;
+    background: none;
+}
+.input-field i{
+    margin-left: 15px;
+    color: var(--azul-muzza);
+}
+form p{
+    text-align: left;
+    font-size: 14px;
+}
+form p a{
+    text-decoration: none;
+    color: #3c00a0;
+    transition: var(--transition);
+}
+form p a:hover{
+    text-decoration: underline;
+    color: var(--laranja-color);
+}
+.btn-field{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.btn-field button{
+    flex-basis: 48%;
+    background: #3c00a0;
+    color: #fff;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: backgound 1s;
+}
+.btn-field button:hover{
+    transition: var(--transition);
+    background: var(--azul-muzza);
+}
+.input-gruop{
+    height: 320px;
+}
+.btn-field button.disable{
+    background: #eaeaea;
+    color: #555;
+}
+.btn-field button.disable:hover{
+    background: var(--laranja-color);
+    transition: var(--transition);
+}
